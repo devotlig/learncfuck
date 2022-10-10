@@ -1,2 +1,5 @@
 # learncfuck
 这是devotlig同学学习C++的文件，同时要顺便学习一下git的基本用法
+
+
+2022年10月10日 学习static和extern关键字，还有一个thread_local因为没有学习过多线程所以留到以后学
