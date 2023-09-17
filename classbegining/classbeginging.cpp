@@ -27,6 +27,14 @@ class Cat
     float SetHeight(float height);
     float SetWeight(float weight);
     string Rename(string name);
+    string GetName()
+    {
+        return Name;
+    };
+    ~Cat()
+    {
+        cout << "Class " << Name << " over" << endl;
+    }
     private:
     float Height;
     float Weight;
@@ -68,7 +76,8 @@ string Cat::Rename(string name)
 }
 
 main()
-{
+// a new discovery,you can add many ; in your program
+{;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     Cat mycat("xiaohua");
     mycat.SetWeight(2.0);
     mycat.SetHeight(0.6);
@@ -77,5 +86,6 @@ main()
     cout << "Rename the cat :" ;
     string Newname;
     cin >> Newname;
-    cout << "New name of this cat is " << mycat.Rename(Newname) << endl;
+    mycat.Rename(Newname);
+    cout << "New name of this cat is " << mycat.GetName() << endl;
 }
