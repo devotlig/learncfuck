@@ -4,5 +4,5 @@ main()
 {
     while
     (true)
-    cout <<"\a"<<"belling"<< endl;
+    cout <<"dd"<<"belling"<< endl;
 }
