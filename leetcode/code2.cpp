@@ -24,25 +24,34 @@ class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         int upper=0;
-        
+        ListNode* i = l1;
         ListNode* j = l2;
         ListNode* result = new ListNode;
         ListNode* resultelem = result;
-        for(ListNode* i = l1;i != nullptr ;i = i->next)
+        resultelem->val = (i->val + j->val + upper)%10;
+        upper = (i->val + j->val + upper)/10;
+        resultelem->next =nullptr;
+        i = i->next;
+        j = j->next;
+        int ival,jval;
+        while(i != nullptr && j != nullptr)
         {
-            cout << i->val << " ";
-            resultelem->val = (i->val + j->val + upper)%10;
-            upper = (i->val + j->val + upper)/10;
-            ListNode ele = new ListNode;
-            resultelem->next =&ele;
-            resultelem = &ele;
+            if()
+            ival = i->val;
+            jval = j->val;
+
+            resultelem->next = new ListNode;
+            resultelem = resultelem->next;
+            resultelem->val = (ival + jval + upper)%10;
+            upper = (ival + jval + upper)/10;
+            i = i->next;
             j = j->next;
         }
-        return &result;
+        return result;
     }
 };
 
-int main()
+int main()S
 {
     ListNode a1,a2,a3,b1,b2,b3;
     a1.val = 2;
