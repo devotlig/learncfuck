@@ -34,24 +34,41 @@ public:
         i = i->next;
         j = j->next;
         int ival,jval;
-        while(i != nullptr && j != nullptr)
+        while(i != nullptr || j != nullptr|| upper != 0)
         {
-            if()
-            ival = i->val;
-            jval = j->val;
+            if(i != nullptr)
+            {
+                ival = i->val;
+                i = i->next;
+            } 
+            else
+            {
+                ival = 0;
+                i = nullptr;
+            }
+                
+            if(j != nullptr)
+            {
+                jval = j->val;
+                j = j->next;
+            }
+            else
+            {
+                jval = 0;
+                j = nullptr;
+            }
 
             resultelem->next = new ListNode;
             resultelem = resultelem->next;
             resultelem->val = (ival + jval + upper)%10;
             upper = (ival + jval + upper)/10;
-            i = i->next;
-            j = j->next;
+            resultelem->next = nullptr;
         }
         return result;
     }
 };
 
-int main()S
+int main()
 {
     ListNode a1,a2,a3,b1,b2,b3;
     a1.val = 2;
