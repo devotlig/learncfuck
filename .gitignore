@@ -1,2 +1,5 @@
+# VS Code 本机编译、调试和 IntelliSense 配置 Windows和mac版本的配置不一样
+.vscode/tasks.json
+.vscode/launch.json
 .vscode/c_cpp_properties.json
 .vscode/settings.json
