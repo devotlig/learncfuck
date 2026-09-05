@@ -22,19 +22,27 @@ struct TreeNode {
 };
 class Solution {
 public:
+    void inorder(TreeNode* root,vector<int>& result)
+    {
+            if(root == nullptr)return ; 
+            inorder(root->left,result);
+            result.push_back(root->val);
+            
+            inorder(root->right,result);
+    }
     vector<int> inorderTraversal(TreeNode* root) {
         // while(nodebegin->left!=nullptr)//先找到最左边的节点
         // {
         //     nodebegin = nodebegin->left;
         // }
         vector<int> ans;
-            if(root == nullptr)return {}; 
-            ans = inorderTraversal(root->left);
-            ans.push_back(root->val);
+            // if(root == nullptr)return {}; 
+            // ans = inorderTraversal(root->left);
+            // ans.push_back(root->val);
             
-            vector<int> righttree = inorderTraversal(root->right);
-            ans.insert(ans.end(),righttree.begin(),righttree.end());
-            
+            // vector<int> righttree = inorderTraversal(root->right);
+            // ans.insert(ans.end(),righttree.begin(),righttree.end());
+        inorder(root,ans);
         
         
         return ans;
