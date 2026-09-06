@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/a1-6/Desktop/cfuck/learncfuck/leetcode/code46'
+relocations:     []
+...
